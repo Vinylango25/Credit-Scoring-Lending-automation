@@ -110,13 +110,9 @@ XGBoost showed similar feature importance with slight differences:
 - This imbalance motivated the use of recall, precision, and F1-score alongside accuracy for a fair evaluation.
 
 - Optimal thresholds were determined by adjusting class weights:
+ ![Probability threshold](pt.png)
 
-| Class Weights | Optimal Threshold | Accuracy |
-|---------------|--------------------|----------|
-| {0:1, 1:1}    | 0.5049              | 75.45%   |
-| {0:1, 1:2}    | **0.6435**           | **75.56%** |
-| {0:1, 1:3}    | 0.6831              | 75.45%   |
-| {0:1, 1:4}    | 0.7722              | 75.45%   |
+
 
 **Key Finding**:  
 Setting **class weight {0:1, 1:2}** and a **threshold ~0.6435** yielded the highest classification accuracy.
