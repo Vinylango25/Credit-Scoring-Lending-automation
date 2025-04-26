@@ -59,31 +59,7 @@ Manual processing of loan applications is costly, slow, and requires extensive h
 
 ## Key Visualizations and Insights
 
-### 2. Feature Importance - Random Forest
-![Random Forest Feature Importance](bar_rf2.pdf)
-
-**Top Features Identified**:
-- **Income**: Higher income correlates with higher loan approval chances.
-- **Loan Amount**: Larger amounts influenced risk assessment.
-- **Previous Delinquencies**: A strong rejection indicator.
-- **Debt-to-Income Ratio**: Crucial for evaluating repayment ability.
-
-**Insight**: Income and previous repayment history are vital determinants for approval decisions.
-
----
-
-### 3. Feature Importance - XGBoost
-![XGBoost Feature Importance](bar_xgb2.pdf)
-
-XGBoost showed similar feature importance with slight differences:
-- **Credit History Length**: Became more significant compared to Random Forest.
-- **Employment Status**: Stability of employment affected approval likelihood.
-
-**Insight**: Borrower stability indicators weigh heavily in approval decisions under boosting models.
-
----
-
-### 4. Model Performance Summary
+### 1. Model Performance Summary
 ![Model Performance Summary](table_22.png)
 
 | Model         | Accuracy (%) | Key Insights |
@@ -94,7 +70,7 @@ XGBoost showed similar feature importance with slight differences:
 
 ---
 
-### 5. Cost Analysis
+### 2. Cost Analysis
 ![Cost Analysis of the models](cost.png)
 
 - To evaluate the cost saving capability of each of the three models, the cost of predictions resulting in incorrect acceptance and incorrect rejection was calculated for each of the model and converted as a percentage of the total labor costs as shown in yellow and blue bars in each of the three figures.
@@ -103,7 +79,7 @@ XGBoost showed similar feature importance with slight differences:
 - The result shows that the proportion of cost due to incorrect acceptance is generally higher (49-54% of the total labor cost) compared to the cost of incorrect rejection (28-31% of the total labor cost). This agrees well with the information in the confusion matrices; high false positives and low false negatives . Thus a further work on data engineering and robust model optimizations is needed to reduce on the number of incorrect loan acceptance.
 - The machine learning saving cost on unseen data is in the range of 14-23 % , with LGBM model having the the biggest cost saving (23%), agreeing with the previous results (LGBM being the best model).
 
-### 1. Class Distribution
+### 3. Class Distribution
 ![Class Distribution](cw.png)
 
 - The dataset exhibited moderate class imbalance with more approved than rejected loans.
