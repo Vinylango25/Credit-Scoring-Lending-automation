@@ -61,7 +61,7 @@ Manual processing of loan applications is costly, slow, and requires extensive h
 ### 1. Cost Analysis
 ![Cost Analysis of the models](cost.png)
 
--To evaluate the cost saving capability of each of the three models, the cost of predictions resulting in incorrect acceptance and incorrect rejection was calculated for each of the model and converted as a percentage of the total labor costs as shown in yellow and blue bars in each of the three figures.
+- To evaluate the cost saving capability of each of the three models, the cost of predictions resulting in incorrect acceptance and incorrect rejection was calculated for each of the model and converted as a percentage of the total labor costs as shown in yellow and blue bars in each of the three figures.
 - Note that the predictions and calculations were based on the test data ( unseen data). Evaluating the models on test data simulates the real scenario of loan applications evaluations where the truth values are not known certainty.
 - Based on the model’s cost of incorrect acceptance and cost of incorrect rejection, and taking the total labor costs as reference (100 %), the saving cost of each model was calculated as a percentage of total labor costs (Shown by the bars with green color in each of figures).
 - The result shows that the proportion of cost due to incorrect acceptance is generally higher (49-54% of the total labor cost) compared to the cost of incorrect rejection (28-31% of the total labor cost). This agrees well with the information in the confusion matrices; high false positives and low false negatives . Thus a further work on data engineering and robust model optimizations is needed to reduce on the number of incorrect loan acceptance.
