@@ -1,4 +1,8 @@
-Machine Learning Automation of Lending Decisions/Credit Scoring
+
+# Credit Scoring and Lending Automation
+
+## Overview
+This project automates the loan approval process by using machine learning models to assess borrower risk. Traditional credit scoring is manual, time-consuming, and prone to inconsistencies. Our system accelerates decision-making, reduces operational costs, and minimizes human bias in lending.
 
 Automating lending decision-making using machine learning is revolutionizing the finance and 
 lending industry by leveraging advanced algorithms to streamline and enhance the approval process.
@@ -18,11 +22,6 @@ increases in resources.
 This work focus on evaluating the extend at which leveraging the three machine learning 
 algorithms: Random Forest, XGBoost and LGBM in loan application decision making can reduce 
 the cost of loan processing
-
-# Credit Scoring and Lending Automation
-
-## Overview
-This project automates the loan approval process by using machine learning models to assess borrower risk. Traditional credit scoring is manual, time-consuming, and prone to inconsistencies. Our system accelerates decision-making, reduces operational costs, and minimizes human bias in lending.
 
 ## Problem Statement
 Loan providers face scaling challenges due to manual reviews. By automating credit evaluation with ML, institutions can ensure faster, fairer, and more scalable lending operations.
@@ -45,6 +44,49 @@ Each model was tuned to balance recall (identifying high-risk clients) and preci
 - **Feature Importance Charts** (bar_rf2.pdf, bar_xgb2.pdf)
 - **Class Distribution Graph** (class_weights.pdf)
 - **Performance Summary Table** (table_22.png)
+
+
+## Key Visualizations and Results
+
+### 1. Class Distribution
+![Class Distribution](class_weights.pdf)
+
+The dataset was moderately imbalanced, with more approved loans than rejected ones. This imbalance required careful model selection and evaluation using metrics like F1-score and ROC-AUC to ensure fairness and accuracy in predictions.
+
+---
+
+### 2. Feature Importance (Random Forest)
+![Random Forest Feature Importance](bar_rf2.pdf)
+
+The Random Forest model revealed that the most influential features for loan approval were:
+- **Income**
+- **Loan Amount**
+- **Previous Delinquencies**
+- **Debt-to-Income Ratio**
+
+Higher income and lower past delinquencies significantly increased the likelihood of approval. Loan amount and existing debts also played crucial roles in risk assessment.
+
+---
+
+### 3. Feature Importance (XGBoost)
+![XGBoost Feature Importance](bar_xgb2.pdf)
+
+XGBoost emphasized similar factors but ranked **credit history length** and **employment status** slightly higher. It confirmed the critical role of financial stability indicators in predicting loan repayment behavior.
+
+---
+
+### 4. Model Performance Summary
+![Model Performance Summary](table_22.png)
+
+**Model Comparison Highlights:**
+- **XGBoost** achieved the best overall performance with a high F1-score and ROC-AUC, making it the preferred model for deployment.
+- **Random Forest** performed competitively but required longer training time.
+- **LightGBM** was fastest but slightly underperformed in predictive accuracy compared to XGBoost.
+
+**Key metrics** included accuracy, F1-score, and AUC-ROC to capture the models’ ability to correctly classify both approved and risky applicants.
+
+---
+
 
 ## Results
 | Model         | Accuracy | F1-Score | AUC-ROC  |
