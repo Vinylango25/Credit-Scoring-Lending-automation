@@ -58,6 +58,9 @@ Manual processing of loan applications is costly, slow, and requires extensive h
 ---
 
 ## Key Visualizations and Insights
+### 1. Cost Analysis
+![Cost Analysis of the models](cost.png)
+
 
 ### 1. Class Distribution
 ![Class Distribution](class_weights.pdf)
