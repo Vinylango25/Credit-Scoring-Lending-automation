@@ -104,10 +104,23 @@ XGBoost showed similar feature importance with slight differences:
 - The machine learning saving cost on unseen data is in the range of 14-23 % , with LGBM model having the the biggest cost saving (23%), agreeing with the previous results (LGBM being the best model).
 
 ### 1. Class Distribution
-![Class Distribution](class_weights.pdf)
+![Class Distribution](cw.png)
 
 - The dataset exhibited moderate class imbalance with more approved than rejected loans.
 - This imbalance motivated the use of recall, precision, and F1-score alongside accuracy for a fair evaluation.
+
+- Optimal thresholds were determined by adjusting class weights:
+
+| Class Weights | Optimal Threshold | Accuracy |
+|---------------|--------------------|----------|
+| {0:1, 1:1}    | 0.5049              | 75.45%   |
+| {0:1, 1:2}    | **0.6435**           | **75.56%** |
+| {0:1, 1:3}    | 0.6831              | 75.45%   |
+| {0:1, 1:4}    | 0.7722              | 75.45%   |
+
+**Key Finding**:  
+Setting **class weight {0:1, 1:2}** and a **threshold ~0.6435** yielded the highest classification accuracy.
+
 
 ---
 
@@ -139,24 +152,6 @@ XGBoost showed similar feature importance with slight differences:
 - Overall, using machine learning led to labor savings between **14% and 23%**.
 
 **Insight**: Reducing false positives (wrong acceptances) should be a priority for even greater savings.
-
----
-
-## Probability Threshold Optimization (LightGBM)
-
-Optimal thresholds were determined by adjusting class weights:
-
-| Class Weights | Optimal Threshold | Accuracy |
-|---------------|--------------------|----------|
-| {0:1, 1:1}    | 0.5049              | 75.45%   |
-| {0:1, 1:2}    | **0.6435**           | **75.56%** |
-| {0:1, 1:3}    | 0.6831              | 75.45%   |
-| {0:1, 1:4}    | 0.7722              | 75.45%   |
-
-**Key Finding**:  
-Setting **class weight {0:1, 1:2}** and a **threshold ~0.6435** yielded the highest classification accuracy.
-
----
 
 ## Conclusion
 
