@@ -102,7 +102,7 @@ Note from the data in the table that the optimal probability decision threshold 
 | {0:1, 1:6}            | 0.801919                      | 0.753535 |
 
 - For this specific problem, the optimal accuracy is achieved when the class weight is set at {0: 1, 1: 2 } and the corresponding probability decision threshold is 0.643535.
-
+![Class Weights Figure](fig3.png)
 - From the figure, the smaller the difference in the values of class weights, the lower the probability thresholds required to achieve high accuracy and vice versa.
 
 ---
