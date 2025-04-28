@@ -91,6 +91,7 @@ Having found that LGBM is the best model compared to the other models implemente
 Note from the data in the table that the optimal probability decision threshold and the accuracy depends on the set class weights.
 
 ![Class Weights Figure](cw.png)
+<img src="cw.png" alt="Cost Evaluation" width="700">
 
 | Class Weights        | Optimal Probability Threshold | Accuracy |
 |----------------------|-------------------------------|----------|
