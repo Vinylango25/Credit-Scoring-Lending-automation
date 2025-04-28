@@ -34,7 +34,7 @@ Develop a machine learning model that can automatically assess and decide on loa
 
 The accuracy of these models was optimized through hyper-parameter tuning using Microsoft AutoML (FLAML), which runs cross-validation internally, and creates optimal parameters based on the number of runs which is determined by the assigned ‘time budget’.
 
-![Performance Evaluation Table](figures/table_22.png)
+![Performance Evaluation Table](table_22.png)
 
 - As shown in the above table, the accuracy of the three models are in range 72-76% with the LGBM Classifier being the best model in all the metrics, and offers the best balance of precision and recall, hence well-balanced in identifying rejections and accepts while also performing accurately overall.
 
@@ -52,7 +52,7 @@ The accuracy of these models was optimized through hyper-parameter tuning using 
 
 ## 📈 Further Evaluation Based on Confusion Matrices
 
-![Confusion Matrix Figure](figures/fig2.png)
+![Confusion Matrix Figure](fig2.png)
 
 - LGBM excels in approving valid loan applications, with a true positive rate of 84%. This means it’s highly effective at identifying genuine applicants, which helps in increasing the number of approved loans and boosting potential revenue.
 
@@ -70,7 +70,7 @@ The accuracy of these models was optimized through hyper-parameter tuning using 
 
 ## 💰 Cost Evaluation
 
-![Cost Evaluation Figure](figures/cost.png)
+![Cost Evaluation Figure](cost.png)
 
 - To evaluate the cost-saving capability of each of the three models, the cost of predictions resulting in incorrect acceptance and incorrect rejection was calculated for each model and converted as a percentage of the total labor costs as shown in yellow and blue bars in each of the three figures.
 
@@ -90,7 +90,7 @@ Having found that LGBM is the best model compared to the other models implemente
 
 Note from the data in the table that the optimal probability decision threshold and the accuracy depends on the set class weights.
 
-![Class Weights Figure](figures/cw.png)
+![Class Weights Figure](cw.png)
 
 | Class Weights        | Optimal Probability Threshold | Accuracy |
 |----------------------|-------------------------------|----------|
