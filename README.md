@@ -90,10 +90,10 @@ Having found that LGBM is the best model compared to the other models implemente
 
 Note from the data in the table that the optimal probability decision threshold and the accuracy depends on the set class weights.
 
-<img src="cw.png" alt="Cost Evaluation" width="1000">
+<img src="cw.png" alt="Cost Evaluation" width="850">
 
 - For this specific problem, the optimal accuracy is achieved when the class weight is set at {0: 1, 1: 2 } and the corresponding probability decision threshold is 0.643535.
-<img src="fig3.png" alt="Cost Evaluation" width="1000">
+<img src="fig3.png" alt="Cost Evaluation" width="850">
 - From the figure, the smaller the difference in the values of class weights, the lower the probability thresholds required to achieve high accuracy and vice versa.
 
 ---
