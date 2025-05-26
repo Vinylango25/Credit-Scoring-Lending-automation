@@ -123,11 +123,11 @@ Having identified the LGBM model as the best performer among those tested, we fu
 The analysis reveals that both the optimal probability decision threshold and the resulting accuracy of the LGBM model are highly dependent on the chosen class weights. This implies that lending institutions can strategically adjust these parameters to align the model’s decision boundary with their risk appetite and operational goals. For example, increasing the weight on the rejection class may reduce risky loan approvals but could also increase false rejections, impacting customer experience. Hence, this flexibility enables a tailored approach to risk management and cost optimization in automated lending decisions.
 
 
-<img src="cw.png" alt="Cost Evaluation" width="850">
+<img src="cw.png" alt="Cost Evaluation" width="750">
 
 For this specific credit scoring problem, the optimal accuracy was achieved when the class weights were set to `{0: 1, 1: 2}`, meaning the model places twice as much importance on correctly identifying the positive class (loan rejections) relative to the negative class (loan approvals). At this weighting, the probability decision threshold that maximizes model performance is approximately **0.6435**. This adjustment reflects a strategic business choice to prioritize reducing false negatives—i.e., minimizing the risk of incorrectly approving high-risk loan applicants. By doing so, financial institutions can more effectively mitigate potential losses from defaults, strengthening overall risk management while maintaining a balanced level of loan approvals to support business growth.
 
-![Probability Threshold vs Class Weights](fig3.png)
+<img src="fig3.png" alt="Cost Evaluation" width="750">
 
 The accompanying figure illustrates how the probability decision threshold varies as the difference between class weights changes. Notably, when the class weights are more balanced (closer in value), the model requires a lower threshold to reach high accuracy, meaning it is more lenient in approving loans. Conversely, as the disparity between the class weights increases, the threshold rises, reflecting a more conservative approval stance. This relationship highlights the flexibility lenders have to calibrate their risk tolerance and operational priorities through class weighting and threshold selection, tailoring the automated decision-making process to optimize the trade-off between maximizing revenue and minimizing credit risk.
 
