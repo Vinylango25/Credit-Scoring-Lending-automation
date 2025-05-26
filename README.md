@@ -62,21 +62,25 @@ This comprehensive, business-driven approach ensures the project delivers not on
 
 ## 🛠️ Tools and Data Management
 
-This project leveraged a combination of powerful tools and platforms to efficiently manage, retrieve, and analyze loan application data, ensuring seamless integration between data storage and machine learning workflows.
+This project utilized a comprehensive suite of tools and platforms to support efficient data management, model development, deployment, and business intelligence, ensuring a seamless end-to-end lending automation workflow.
 
 - **Data Storage and Retrieval**:  
-  The loan application dataset was stored in a **PostgreSQL** relational database, managed through **DBeaver**, a versatile database management tool. Using DBeaver, SQL queries were crafted to extract relevant data subsets directly from the PostgreSQL platform. This approach enabled precise, real-time data retrieval, reducing data preprocessing time and improving the overall efficiency of the modeling pipeline.
+  Loan application data was securely stored in a **PostgreSQL** database and accessed via **DBeaver**, which enabled precise SQL querying and data extraction. This direct integration with the data source ensured that machine learning models were trained on accurate, up-to-date data, reducing preprocessing time and enhancing the responsiveness of the lending decision system.
 
-- **Data Querying and Processing**:  
-  SQL queries were designed to filter, aggregate, and prepare data for machine learning analysis. By querying the database directly, the team ensured the models were trained on the most up-to-date and accurate information, which is critical in dynamic financial environments where timely decisions impact revenue and risk management.
+- **Machine Learning and Hyperparameter Optimization**:  
+  Models were developed using state-of-the-art algorithms including **LightGBM (LGBM)**, **Random Forest (RF)**, and **XGBoost**, implemented in Python. Model tuning and validation were automated using **Microsoft AutoML (FLAML)**, optimizing performance while minimizing manual intervention. This facilitated the rapid development of robust models that drive accurate loan approvals and risk assessments, directly impacting operational efficiency and cost reduction.
 
-- **Machine Learning Framework**:  
-  The core modeling leveraged popular and scalable algorithms such as **LightGBM (LGBM)**, **Random Forest (RF)**, and **XGBoost**, implemented using Python libraries optimized for performance and interpretability. Hyperparameter tuning and model validation were conducted using **Microsoft AutoML (FLAML)**, which automated the search for optimal model settings and facilitated efficient use of computational resources.
+- **Model Deployment and Collaboration**:  
+  To ensure scalability and ease of deployment, the best-performing model (LGBM) was containerized using **Docker**. Containerization guarantees consistent environments across development, testing, and production, enabling smooth integration with existing IT infrastructure and faster rollout of updates. Collaborative development and version control were managed through **Vision Control**, ensuring code quality, traceability, and coordinated teamwork — critical for maintaining reliability in financial applications.
+
+- **Business Intelligence and Reporting**:  
+  For post-risk analysis, monitoring, and reporting, the project leveraged **Preset**, a modern business intelligence platform. Preset provided interactive dashboards and real-time insights into model performance, risk metrics, and cost savings, empowering business stakeholders to make informed decisions and track the impact of automation on loan processing efficiency.
 
 - **Business Impact**:  
-  The integration of these tools not only streamlined the technical workflow but also aligned with business goals by enabling rapid, data-driven loan decisioning. The end-to-end system—from data extraction in PostgreSQL through model deployment—supports scalable, consistent, and transparent lending processes, ultimately reducing operational costs and improving customer satisfaction.
+  The integration of these technologies supports an agile, transparent, and scalable lending automation system. Efficient data querying from PostgreSQL, automated model optimization, reliable containerized deployment, and rich BI reporting collectively reduce operational costs, mitigate risk, and enhance customer satisfaction through faster, data-driven loan decisions.
 
-This robust toolchain ensured that the data pipeline was reliable, the modeling was precise, and the resulting automation solution was well-positioned to drive meaningful business outcomes.
+This holistic technology stack enables the financial institution to stay competitive, responsive, and compliant in a rapidly evolving lending landscape.
+
 
 
 ## 🚀 Performance Evaluation of the Models
